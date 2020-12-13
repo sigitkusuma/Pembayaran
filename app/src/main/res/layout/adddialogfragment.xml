@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fcf8ec"
     android:padding="4dp">
 
     <LinearLayout
@@ -19,71 +20,78 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Amount"
+            android:layout_marginTop="40dp"
+            android:text="Laporan Keuangan"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
 
-        <TextView
-            style="@style/TextAppearance.AppCompat.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Amount"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="34dp"
-            android:orientation="horizontal"
-            android:padding="12dp">
-
-            <RadioButton
-                android:id="@+id/pay"
-                android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="34dp"
-                android:text="Pay"></RadioButton>
+                android:orientation="horizontal"
+                android:padding="12dp">
+                <RadioButton
+                    android:id="@+id/pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="34dp"
+                    android:textColor="#456268"
+                    android:text="Keluar">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/recieve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#456268"
+                    android:text="Masuk">
+                </RadioButton>
+            </RadioGroup>
 
-            <RadioButton
-                android:id="@+id/recieve"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Recieve"></RadioButton>
-        </RadioGroup>
+        </LinearLayout>
 
         <EditText
             android:id="@+id/tofrom"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginLeft="12dp"
+            android:paddingLeft="20dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
-            android:background="@drawable/bg_drawable"
-            android:hint="To/From"></EditText>
+            android:textColorHint="#fcf8ec"
+            android:background="@drawable/square_left"
+            android:hint="Ke/Dari">
+        </EditText>
 
         <EditText
             android:id="@+id/wanttoaddtitle"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginLeft="12dp"
+            android:paddingLeft="20dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
-            android:background="@drawable/bg_drawable"
-            android:hint="Want to Title ?"></EditText>
+            android:background="@drawable/square_left"
+            android:textColorHint="#fcf8ec"
+            android:hint="Jenis">
+        </EditText>
 
         <EditText
             android:id="@+id/wanttoadddescription"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginLeft="12dp"
+            android:paddingLeft="20dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
-            android:background="@drawable/bg_drawable"
-            android:hint="Want to Description ?"></EditText>
+            android:background="@drawable/square_left"
+            android:hint="Deskripsi"
+            android:textColorHint="#fcf8ec">
+        </EditText>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

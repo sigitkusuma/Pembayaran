@@ -62,8 +62,8 @@ public class AddDialogFragment extends AppCompatDialogFragment {
 
     public void creating_dialogview() {
         builder.setView(view)
-                .setTitle("Fill transaction details")
-                .setPositiveButton("Save", new DialogInterface.OnClickListener() {
+                .setTitle("Masukan detail transaksi")
+                .setPositiveButton("Simpan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         SharedPreferences sharedPreferences = getContext().getSharedPreferences("id_generator", Context.MODE_PRIVATE);
@@ -79,11 +79,11 @@ public class AddDialogFragment extends AppCompatDialogFragment {
                         }
                         String paymenttype = null;
                         if (radioPay.isChecked()) {
-                            paymenttype = "Paid";
+                            paymenttype = "Keluar";
                             payment_type = 1;
                         }
                         if (radioRecieve.isChecked()) {
-                            paymenttype = "Recieved";
+                            paymenttype = "Masuk";
                             payment_type = 2;
                         }
                         String tofrom = edittofrom.getText().toString();
@@ -100,11 +100,11 @@ public class AddDialogFragment extends AppCompatDialogFragment {
                                 Date c = Calendar.getInstance().getTime();
                                 SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
                                 formattedDate = df.format(c);
-                                fileOutputStream = getContext().openFileOutput(formattedDate + " ->  " + paymenttype + " " + txtamount + "rs.txt", Context.MODE_PRIVATE);
+                                fileOutputStream = getContext().openFileOutput(formattedDate + " ->  " + paymenttype + " " + txtamount + " " + "Rupiah", Context.MODE_PRIVATE);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            String data = "On data = "+formattedDate+"\nAmount "+paymenttype +" = " + txtamount + "\nto/from = " + tofrom+"\n\nTitle = " + title + "\nDescription = " + desc;
+                            String data = "Tanggal = "+formattedDate+"\nKeuangan "+paymenttype +" = " + txtamount + "\nKe/Dari = " + tofrom+"\n\nJenis = " + title + "\nKeterangan = " + desc;
                             try {
                                 assert fileOutputStream != null;
                                 fileOutputStream.write(data.getBytes());

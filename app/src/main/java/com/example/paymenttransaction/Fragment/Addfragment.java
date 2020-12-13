@@ -18,10 +18,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.paymenttransaction.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Addfragment extends Fragment {
-    private Button btnproceeds;
+//    private Button btnproceeds;
     private EditText fillamount;
+    FloatingActionButton btnproceeds;
     static int count = 0;
 
     @Nullable
