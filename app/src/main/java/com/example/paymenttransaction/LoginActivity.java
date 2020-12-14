@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class LoginActivity extends AppCompatActivity {
 
-    Button signIn;
+    FloatingActionButton signIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
