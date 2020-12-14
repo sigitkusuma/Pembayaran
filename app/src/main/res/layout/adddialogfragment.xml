@@ -68,18 +68,18 @@
             android:hint="Ke/Dari">
         </EditText>
 
-        <EditText
-            android:id="@+id/wanttoaddtitle"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="12dp"
-            android:paddingLeft="20dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="12dp"
-            android:background="@drawable/square_left"
-            android:textColorHint="#fcf8ec"
-            android:hint="Jenis">
-        </EditText>
+<!--        <EditText-->
+<!--            android:id="@+id/wanttoaddtitle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginLeft="12dp"-->
+<!--            android:paddingLeft="20dp"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:layout_marginRight="12dp"-->
+<!--            android:background="@drawable/square_left"-->
+<!--            android:textColorHint="#fcf8ec"-->
+<!--            android:hint="Jenis">-->
+<!--        </EditText>-->
 
         <EditText
             android:id="@+id/wanttoadddescription"

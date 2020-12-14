@@ -34,18 +34,6 @@
             app:layout_constraintTop_toTopOf="parent"/>
     </androidx.cardview.widget.CardView>
 
-<!--    <Button-->
-<!--        android:background="@drawable/square"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_below="@+id/cv_fill"-->
-<!--        android:id="@+id/proceed"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Proses"-->
-<!--        android:textColor="#fcf8ec">-->
-<!--    </Button>-->
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

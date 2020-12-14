@@ -87,7 +87,7 @@ public class AddDialogFragment extends AppCompatDialogFragment {
                             payment_type = 2;
                         }
                         String tofrom = edittofrom.getText().toString();
-                        String title = edittitle.getText().toString();
+//                        String title = edittitle.getText().toString();
                         String desc = editdescription.getText().toString();
                         int result = on_net_balance();
                         if (payment_type == 0 && result == 0) {
@@ -104,7 +104,7 @@ public class AddDialogFragment extends AppCompatDialogFragment {
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            String data = "Tanggal = "+formattedDate+"\nKeuangan "+paymenttype +" = " + txtamount + "\nKe/Dari = " + tofrom+"\n\nJenis = " + title + "\nKeterangan = " + desc;
+                            String data = "Tanggal = "+formattedDate+"\nKeuangan "+paymenttype +" = " + txtamount + "\nKe/Dari = " + tofrom+"\nKeterangan = " + desc;
                             try {
                                 assert fileOutputStream != null;
                                 fileOutputStream.write(data.getBytes());
@@ -174,7 +174,7 @@ public class AddDialogFragment extends AppCompatDialogFragment {
         radioPay = view.findViewById(R.id.pay);
         radioRecieve = view.findViewById(R.id.recieve);
         edittofrom = view.findViewById(R.id.tofrom);
-        edittitle = view.findViewById(R.id.wanttoaddtitle);
+//        edittitle = view.findViewById(R.id.wanttoaddtitle);
         editdescription = view.findViewById(R.id.wanttoadddescription);
     }
 }
